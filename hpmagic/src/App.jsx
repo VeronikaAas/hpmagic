@@ -1,24 +1,27 @@
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './index.css';
+import Layout from './components/layout/layout';
+import Home from './pages/home';
+import Books from './pages/books';
+import Movies from './pages/movies';
+import Characters from './pages/characters';
+import Spells from './pages/spells';
+import Potions from './pages/potions';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Routes>
+      {/* Wrapper layout */}
+      <Route path="/" element={<Layout />}>
+        {/* Nested routes under layout */}
+        <Route index element={<Home />} />
+        <Route path="books" element={<Books />} />
+        <Route path="movies" element={<Movies />} />
+        <Route path="characters" element={<Characters />} />
+        <Route path="spells" element={<Spells />} />
+        <Route path="potions" element={<Potions />} />
+      </Route>
+    </Routes>
   );
 }
 
