@@ -3,6 +3,7 @@ import './index.css';
 import Layout from './components/layout/layout';
 import Home from './pages/home';
 import Books from './pages/books';
+import BookDetails from './pages/bookDetails';
 import Movies from './pages/movies';
 import Characters from './pages/characters';
 import Spells from './pages/spells';
@@ -16,6 +17,7 @@ function App() {
         {/* Nested routes under layout */}
         <Route index element={<Home />} />
         <Route path="books" element={<Books />} />
+        <Route path="books/:id" element={<BookDetails />} />
         <Route path="movies" element={<Movies />} />
         <Route path="characters" element={<Characters />} />
         <Route path="spells" element={<Spells />} />
