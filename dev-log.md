@@ -18,7 +18,12 @@
 - Jobbet med å finne inspirasjon og laget et ca design til siden.
 - Lage elementer til siden i Adobe Illustrator
 
-## 07.09.25
+## 08.09.25
 
 - Lage mappestruktur i prosjektet
 - Lagde global css fil (index.css), hvor jeg valgte bakgrunnsfarge, font til titler, og brødtekst/knappe font.
+- Installerte React Router Dom og begynte å sette opp en router
+- Sidenote: ser jeg har brukt feat som meaningful commit når jeg skulle brukt build i "oppsettfasen".
+- Fått inn innhold på Homepage
+- Laget Navbar/Header
+- Fått fetchet og displayet bøkene & mer informasjon om hver enkelt bok (vil style senere)
