@@ -10,8 +10,8 @@ function Home() {
         className="hedvig"
         loading="lazy"
       />
-      <h1>A magical world awaits.</h1>
-      <h2>Step into Harry Potter's story.</h2>
+      <h1>A magical world awaits</h1>
+      <h2>Step into Harry Potter's story</h2>
     </div>
   );
 }
