@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BOOKS_URL } from '../../utils/constants';
+import Modal from '../genericModal/modal';
 
 function ChapterModal({ bookId, chapterId, onClose }) {
   const [chapter, setChapter] = useState(null);
@@ -36,30 +37,21 @@ function ChapterModal({ bookId, chapterId, onClose }) {
     fetchChapter();
   }, [bookId, chapterId]);
 
+  const a = chapter?.attributes;
+
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal" onClick={e => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
-          Close
-        </button>
+    <Modal onClose={onClose}>
+      {loading && <p>Loading chapter...</p>}
 
-        {loading && <p className="modal-loading">Loading chapter...</p>}
+      {error && <p className="modal-error">{error}</p>}
 
-        {error && <p className="modal-error">{error}</p>}
-
-        {!loading && !error && chapter && (
-          <>
-            <h2 className="modal-title">
-              {chapter.attributes.title ||
-                `Chapter ${chapter.attributes.chapter}`}
-            </h2>
-            <p className="modal-summary">
-              {chapter.attributes.summary || 'No summary available.'}
-            </p>
-          </>
-        )}
-      </div>
-    </div>
+      {!loading && !error && chapter && (
+        <div>
+          <h2>{a.title || `Chapter ${a.chapter}`}</h2>
+          <p>{a.summary || 'No summary available.'}</p>
+        </div>
+      )}
+    </Modal>
   );
 }
 
