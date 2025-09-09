@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BOOKS_URL } from '../../utils/constants';
-import { Link } from 'react-router-dom';
+import Card from '../../components/card/elementCard';
 
 function Books() {
   const [books, setBooks] = useState([]);
@@ -19,23 +19,20 @@ function Books() {
       });
   }, []);
 
-  if (loading) return <p>Loading books</p>;
+  if (loading) return <p>Loading books...</p>;
 
   return (
-    <div>
+    <div className="books-container">
       <h1>Books</h1>
-      <ul>
+      <div className="card-grid">
         {books.map(book => (
-          <li key={book.id}>
-            <Link
-              to={`/books/${book.id}`}
-              state={{ title: book.attributes.title }}
-            >
-              {book.attributes.title}
-            </Link>
-          </li>
+          <Card
+            key={book.id}
+            title={book.attributes.title}
+            to={`/books/${book.id}`}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

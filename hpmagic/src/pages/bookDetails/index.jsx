@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { BOOKS_URL } from '../../utils/constants';
 import ChapterModal from '../../components/chapterModal/chapterModal';
+import Card from '../../components/card/elementCard';
 
 function BookDetails() {
   const { id } = useParams();
@@ -38,7 +39,7 @@ function BookDetails() {
   const attributes = book.attributes;
 
   return (
-    <div>
+    <div className="books-container">
       <h1>{attributes.title}</h1>
 
       <p>
@@ -51,34 +52,23 @@ function BookDetails() {
         <strong>Description:</strong>{' '}
         {attributes.summary || 'No description available.'}
       </p>
-
       <h2>Chapters</h2>
+
       {chapters.length === 0 ? (
-        <p>
-          No chapters found for this book. Some books in the API do not include
-          chapter information.
-        </p>
+        <p>No chapters found...</p>
       ) : (
-        <ul>
+        <div className="card-grid">
           {chapters.map(chapter => (
-            <li key={chapter.id}>
-              <button
-                onClick={() => setSelectedChapterId(chapter.id)}
-                style={{
-                  cursor: 'pointer',
-                  background: 'none',
-                  border: 'none',
-                  padding: 0,
-                  textDecoration: 'underline',
-                  color: 'blue',
-                }}
-              >
-                {chapter.attributes.title ||
-                  `Chapter ${chapter.attributes.chapter}`}
-              </button>
-            </li>
+            <Card
+              key={chapter.id}
+              title={
+                chapter.attributes.title ||
+                `Chapter ${chapter.attributes.chapter}`
+              }
+              onClick={() => setSelectedChapterId(chapter.id)}
+            />
           ))}
-        </ul>
+        </div>
       )}
 
       {selectedChapterId && (
