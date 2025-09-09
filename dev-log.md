@@ -27,3 +27,11 @@
 - Fått inn innhold på Homepage
 - Laget Navbar/Header
 - Fått fetchet og displayet bøkene & mer informasjon om hver enkelt bok (vil style senere)
+
+## 09.09.25
+
+- Fått satt opp et reusable grid-system (må pyntes mer på)
+- Fått fetchet og displayet movies & mer informasjon om hver movie
+- Satt opp en base for reusable modal som går igjen på de "pop-upsa" med mer informasjon (må styles mer)
+- Stylet homepage, fikk "Hevig" til å bli sentrert med tekst sentrert under
+- La til hamburger meny til mindre skjermer + styling
