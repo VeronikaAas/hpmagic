@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './header.module.css';
 import {
@@ -7,6 +8,7 @@ import {
   FaFilm,
   FaUser,
   FaHome,
+  FaBars,
 } from 'react-icons/fa';
 
 const links = [
@@ -19,25 +21,40 @@ const links = [
 ];
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className={styles.navbar}>
-      {links.map(({ to, label, icon }) => (
-        <NavLink
-          key={to}
-          to={to}
-          className={({ isActive }) =>
-            isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-          }
-        >
-          {({ isActive }) => (
-            <>
-              {isActive && <span className={styles.icon}>{icon}</span>}
-              <span className={styles.text}>{label}</span>
-            </>
-          )}
-        </NavLink>
-      ))}
-    </nav>
+    <header className={styles.header}>
+      <button
+        className={styles.hamburger}
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle menu"
+      >
+        <FaBars />
+      </button>
+
+      <nav
+        className={`${styles.navbar} ${menuOpen ? styles.open : ''}`}
+        onClick={() => setMenuOpen(false)}
+      >
+        {links.map(({ to, label, icon }) => (
+          <NavLink
+            key={to}
+            to={to}
+            className={({ isActive }) =>
+              isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+            }
+          >
+            {({ isActive }) => (
+              <>
+                {isActive && <span className={styles.icon}>{icon}</span>}
+                <span className={styles.text}>{label}</span>
+              </>
+            )}
+          </NavLink>
+        ))}
+      </nav>
+    </header>
   );
 }
 
