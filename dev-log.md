@@ -35,3 +35,10 @@
 - Satt opp en base for reusable modal som går igjen på de "pop-upsa" med mer informasjon (må styles mer)
 - Stylet homepage, fikk "Hevig" til å bli sentrert med tekst sentrert under
 - La til hamburger meny til mindre skjermer + styling
+
+## 10.09.25
+
+- Fetchet og displayet characters + tilhørende modal
+- Fetchet og displayet spells + tilhørende modal
+- Fetchet og displayet potions + tilhørende modal
+-
