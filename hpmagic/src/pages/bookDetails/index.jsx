@@ -26,6 +26,7 @@ function BookDetails() {
         setChapters(chaptersData.data);
       } catch (error) {
         console.error('Error fetching:', error);
+        setError(error.message || 'Something went wrong while fetching data.');
       } finally {
         setLoading(false);
       }

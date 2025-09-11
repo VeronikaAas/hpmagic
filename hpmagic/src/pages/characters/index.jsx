@@ -37,6 +37,9 @@ function Characters() {
         setCharacters(data.data);
       } catch (err) {
         console.error('Error fetching characters:', err);
+        setError(
+          error.message || 'Something went wrong while fetching characters.',
+        );
       } finally {
         setLoading(false);
       }

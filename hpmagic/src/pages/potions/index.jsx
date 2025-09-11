@@ -40,6 +40,9 @@ function Potions() {
         setPotions(data.data);
       } catch (err) {
         console.error('Error fetching potions:', err);
+        setError(
+          error.message || 'Something went wrong while fetching potions.',
+        );
       } finally {
         setLoading(false);
       }

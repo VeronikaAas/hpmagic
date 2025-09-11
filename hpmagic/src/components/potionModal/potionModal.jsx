@@ -18,7 +18,7 @@ function PotionModal({ potionId, onClose }) {
         setPotion(data.data);
       } catch (err) {
         console.error(err);
-        setError('Could not load potion details.');
+        setError(err.message || 'Could not load potion details.');
       } finally {
         setLoading(false);
       }

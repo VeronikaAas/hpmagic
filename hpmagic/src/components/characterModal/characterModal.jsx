@@ -20,7 +20,7 @@ function CharacterModal({ characterId, onClose }) {
         setCharacter(data.data);
       } catch (err) {
         console.error(err);
-        setError('Failed to load character.');
+        setError(err.message || 'Failed to load character.');
       } finally {
         setLoading(false);
       }

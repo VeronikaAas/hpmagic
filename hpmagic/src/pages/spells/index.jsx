@@ -42,6 +42,9 @@ function Spells() {
         setSpells(data.data);
       } catch (err) {
         console.error('Error fetching spells:', err);
+        setError(
+          error.message || 'Something went wrong while fetching spells.',
+        );
       } finally {
         setLoading(false);
       }

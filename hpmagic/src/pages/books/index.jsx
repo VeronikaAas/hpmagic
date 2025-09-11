@@ -15,6 +15,7 @@ function Books() {
       })
       .catch(error => {
         console.error('Failed to fetch books:', error);
+        setError(error.message || 'Something went wrong while fetching books.');
         setLoading(false);
       });
   }, []);

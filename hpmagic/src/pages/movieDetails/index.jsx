@@ -17,6 +17,9 @@ function MovieDetails() {
         setMovie(movieData.data);
       } catch (error) {
         console.error('Error fetching:', error);
+        setError(
+          error.message || 'Something went wrong while fetching movie details.',
+        );
       } finally {
         setLoading(false);
       }

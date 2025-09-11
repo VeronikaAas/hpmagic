@@ -15,6 +15,9 @@ function Movies() {
       })
       .catch(error => {
         console.error('Failed to fetch movies:', error);
+        setError(
+          error.message || 'Something went wrong while fetching movies.',
+        );
         setLoading(false);
       });
   }, []);

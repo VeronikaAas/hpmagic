@@ -28,7 +28,9 @@ function ChapterModal({ bookId, chapterId, onClose }) {
         setChapter(data.data);
       } catch (err) {
         console.error('Failed to fetch chapter:', err);
-        setError('Could not load the chapter. Please try again later.');
+        setError(
+          err.message || 'Could not load the chapter. Please try again later.',
+        );
       } finally {
         setLoading(false);
       }
