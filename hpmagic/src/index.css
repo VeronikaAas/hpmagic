@@ -52,6 +52,8 @@ button {
   width: 90%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 .modal-close {
@@ -70,8 +72,20 @@ button {
   margin-bottom: 1rem;
 }
 
+.modal p {
+  color: var(--bg-color);
+}
+
 .modal-summary {
   line-height: 1.5;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .modal-loading,
@@ -137,5 +151,8 @@ button {
 @media (max-width: 600px) {
   .card-grid {
     grid-template-columns: 1fr;
+  }
+  .modal {
+    max-height: 70%;
   }
 }

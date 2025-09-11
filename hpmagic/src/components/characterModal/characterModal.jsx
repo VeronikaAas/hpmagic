@@ -66,13 +66,9 @@ function CharacterModal({ characterId, onClose }) {
 
           {character.attributes.image && (
             <img
+              className="modal-image"
               src={character.attributes.image}
               alt={character.attributes.name}
-              style={{
-                maxWidth: '100%',
-                marginTop: '1rem',
-                borderRadius: '8px',
-              }}
             />
           )}
         </div>

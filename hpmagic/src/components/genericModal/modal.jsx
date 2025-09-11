@@ -3,7 +3,7 @@ function Modal({ onClose, children }) {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal" onClick={e => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose}>
-          Close
+          X Close
         </button>
         {children}
       </div>
