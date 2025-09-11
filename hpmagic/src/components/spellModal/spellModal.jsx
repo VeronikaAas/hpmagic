@@ -18,7 +18,7 @@ function SpellModal({ spellId, onClose }) {
         setSpell(data.data);
       } catch (err) {
         console.error(err);
-        setError('Could not load spell details.');
+        setError(err.message || 'Could not load spell details.');
       } finally {
         setLoading(false);
       }
