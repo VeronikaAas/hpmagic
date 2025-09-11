@@ -15,6 +15,10 @@
   margin: 0.7rem 0;
 }
 
+p {
+  color: var(--detail-color);
+}
+
 @media (max-width: 1024px) {
   .categorySelect {
     width: 50%;
