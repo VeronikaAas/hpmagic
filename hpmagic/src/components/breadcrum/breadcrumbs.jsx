@@ -4,22 +4,15 @@ import styles from './breadcrumbs.module.css';
 function Breadcrumbs() {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter(x => x);
-  const state = location.state;
+
+  if (pathnames.length === 0) return null;
 
   return (
     <nav className={styles.breadcrumbs}>
       <Link to="/">Home</Link>
-      {pathnames.map((name, index) => {
+      {pathnames.slice(0, -1).map((name, index) => {
         const routeTo = '/' + pathnames.slice(0, index + 1).join('/');
-        const isLast = index === pathnames.length - 1;
-
-        // Bruk "title" hvis den finnes i location.state (fra f.eks. Books -> BookDetails)
-        const displayName =
-          isLast && state?.title ? state.title : decodeURIComponent(name);
-
-        return isLast ? (
-          <span key={index}> / {displayName}</span>
-        ) : (
+        return (
           <span key={index}>
             {' / '}
             <Link to={routeTo}>{decodeURIComponent(name)}</Link>
