@@ -14,7 +14,7 @@ function Breadcrumbs() {
         const routeTo = '/' + pathnames.slice(0, index + 1).join('/');
         return (
           <span key={index}>
-            {' / '}
+            {' < '}
             <Link to={routeTo}>{decodeURIComponent(name)}</Link>
           </span>
         );
