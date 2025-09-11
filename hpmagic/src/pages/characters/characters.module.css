@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+p {
+  color: var(--detail-color);
+}
+
 @media (max-width: 1024px) {
   .categorySelect {
     width: 50%;
