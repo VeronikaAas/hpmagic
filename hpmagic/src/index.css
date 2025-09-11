@@ -118,9 +118,19 @@ button {
   gap: 24px;
 }
 
+.searchInput {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid var(--detail-color);
+  width: 50%;
+}
+
 @media (max-width: 1024px) {
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .searchInput {
+    width: 70%;
   }
 }
 
