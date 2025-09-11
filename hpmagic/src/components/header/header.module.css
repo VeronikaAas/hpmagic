@@ -31,7 +31,7 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: #eab87b;
+  color: var(--detail-color);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition:
@@ -41,13 +41,13 @@
 }
 
 .navLink:hover {
-  background-color: #eab87b;
-  color: #11131f;
+  background-color: var(--detail-color);
+  color: var(--bg-color);
 }
 
 .active {
-  background-color: #eab87b;
-  color: #11131f;
+  background-color: var(--detail-color);
+  color: var(--bg-color);
 }
 
 .icon {
@@ -68,7 +68,7 @@
   bottom: -3px;
   width: 100%;
   height: 2px;
-  background-color: #11131f;
+  background-color: var(--bg-color);
 }
 
 @media (max-width: 768px) {
@@ -82,7 +82,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #11131f;
+    background-color: var(--bg-color);
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
