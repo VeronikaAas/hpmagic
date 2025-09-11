@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { MOVIES_URL } from '../../utils/constants';
+import styles from './movieDetails.module.css';
 
 function MovieDetails() {
   const { id } = useParams();
@@ -30,38 +31,40 @@ function MovieDetails() {
 
   return (
     <div className="movies-container">
-      <h1>{attributes.title}</h1>
+      <div className={styles.movieDetails}>
+        <h1>{attributes.title}</h1>
 
-      <p>
-        <strong>Release date:</strong> {attributes.release_date || 'Unknown'}
-      </p>
+        <p>
+          <strong>Release date:</strong> {attributes.release_date || 'Unknown'}
+        </p>
 
-      <p>
-        <strong>Running time:</strong> {attributes.running_time || 'Unknown'}
-      </p>
+        <p>
+          <strong>Running time:</strong> {attributes.running_time || 'Unknown'}
+        </p>
 
-      <p>
-        <strong>Rating:</strong> {attributes.rating || 'Unknown'}
-      </p>
+        <p>
+          <strong>Rating:</strong> {attributes.rating || 'Unknown'}
+        </p>
 
-      <p>
-        <strong>Budget:</strong> {attributes.budget || 'Unknown'}
-      </p>
+        <p>
+          <strong>Budget:</strong> {attributes.budget || 'Unknown'}
+        </p>
 
-      <p>
-        <strong>Screenwriters:</strong>{' '}
-        {attributes.screenwriters?.join(', ') || 'Unknown'}
-      </p>
+        <p>
+          <strong>Screenwriters:</strong>{' '}
+          {attributes.screenwriters?.join(', ') || 'Unknown'}
+        </p>
 
-      <p>
-        <strong>Producers:</strong>{' '}
-        {attributes.producers?.join(', ') || 'Unknown'}
-      </p>
+        <p>
+          <strong>Producers:</strong>{' '}
+          {attributes.producers?.join(', ') || 'Unknown'}
+        </p>
 
-      <p>
-        <strong>Description:</strong>{' '}
-        {attributes.summary || 'No description available.'}
-      </p>
+        <p>
+          <strong>Description:</strong>{' '}
+          {attributes.summary || 'No description available.'}
+        </p>
+      </div>
     </div>
   );
 }
