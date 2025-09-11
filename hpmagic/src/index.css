@@ -17,6 +17,10 @@ h6 {
   font-family: var(--font-title);
 }
 
+h1 {
+  color: #eab87b;
+}
+
 body,
 input,
 textarea,
