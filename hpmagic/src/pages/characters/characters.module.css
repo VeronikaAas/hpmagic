@@ -1,0 +1,33 @@
+.charactersContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.searchInput {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid var(--detail-color);
+  width: 50%;
+}
+
+.houseSelect {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid var(--detail-color);
+  width: 30%;
+  margin: 0.7rem 0;
+}
+
+@media (max-width: 1024px) {
+  .houseSelect {
+    width: 50%;
+  }
+
+  .searchInput {
+    width: 70%;
+  }
+}

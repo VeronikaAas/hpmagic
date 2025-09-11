@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CHARACTERS_URL } from '../../utils/constants';
 import Card from '../../components/card/elementCard';
 import CharacterModal from '../../components/characterModal/characterModal';
+import styles from './characters.module.css';
 
 const HOUSES = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
 
@@ -45,17 +46,19 @@ function Characters() {
   }, [selectedHouse, searchTerm]);
 
   return (
-    <div className="characters-container">
+    <div className={styles.charactersContainer}>
       <h1>Characters</h1>
 
       <input
         type="text"
+        className={styles.searchInput}
         placeholder="Search by name..."
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
       />
 
       <select
+        className={styles.houseSelect}
         value={selectedHouse}
         onChange={e => setSelectedHouse(e.target.value)}
       >
@@ -69,7 +72,9 @@ function Characters() {
 
       {loading && <p>Loading characters...</p>}
 
-      {!loading && characters.length === 0 && <p>No characters found.</p>}
+      {!loading && characters.length === 0 && (
+        <p>Maybe the character are in a different house?</p>
+      )}
 
       <div className="card-grid">
         {characters.map(char => (
