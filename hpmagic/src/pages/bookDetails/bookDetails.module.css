@@ -1,7 +1,7 @@
 .bookDetails {
   display: flex;
   flex-direction: column;
-  color: #eab87b;
+  color: var(--detail-color);
   align-items: center;
   justify-content: center;
   gap: 12px;

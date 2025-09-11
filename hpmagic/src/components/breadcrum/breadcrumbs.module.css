@@ -1,13 +1,13 @@
 .breadcrumbs {
   font-size: 1rem;
-  color: #eab87b;
+  color: var(--detail-color);
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
 .breadcrumbs a {
-  color: #eab87b;
+  color: var(--detail-color);
   text-decoration: none;
 }
 

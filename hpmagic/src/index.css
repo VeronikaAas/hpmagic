@@ -1,5 +1,6 @@
 :root {
   --bg-color: #11131f;
+  --detail-color: #eab87b;
   --font-title: 'Baskerville', serif;
   --font-body: 'inter', 'roboto', sans-serif;
 }
@@ -18,7 +19,8 @@ h6 {
 }
 
 h1 {
-  color: #eab87b;
+  color: var(--detail-color);
+  text-align: center;
 }
 
 body,
@@ -79,7 +81,7 @@ button {
 }
 
 .card {
-  background-color: #eab87b;
+  background-color: var(--detail-color);
   padding: 1rem;
   border-radius: 0.5rem;
   text-align: center;

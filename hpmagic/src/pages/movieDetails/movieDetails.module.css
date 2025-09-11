@@ -1,5 +1,5 @@
 .movieDetails {
-  background-color: #eab87b;
+  background-color: var(--detail-color);
   display: flex;
   flex-direction: column;
   color: var(--bg-color);

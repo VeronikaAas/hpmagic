@@ -12,7 +12,7 @@
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: #eab87b;
+  color: var(--detail-color);
   cursor: pointer;
   z-index: 101;
 }

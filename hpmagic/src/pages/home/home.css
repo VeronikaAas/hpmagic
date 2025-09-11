@@ -15,7 +15,7 @@
 }
 
 .text-content {
-  color: #eab87b;
+  color: var(--detail-color);
   margin-top: 1rem;
 }
 
