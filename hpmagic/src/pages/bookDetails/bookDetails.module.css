@@ -1,0 +1,21 @@
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  color: #eab87b;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bookDetails h1 {
+  margin-bottom: 8px;
+}
+
+.bookDetails p {
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+}

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { BOOKS_URL } from '../../utils/constants';
 import ChapterModal from '../../components/chapterModal/chapterModal';
 import Card from '../../components/card/elementCard';
+import styles from './bookDetails.module.css';
 
 function BookDetails() {
   const { id } = useParams();
@@ -40,19 +41,21 @@ function BookDetails() {
 
   return (
     <div className="books-container">
-      <h1>{attributes.title}</h1>
+      <div className={styles.bookDetails}>
+        <h1>{attributes.title}</h1>
 
-      <p>
-        <strong>Release date:</strong> {attributes.release_date}
-      </p>
-      <p>
-        <strong>Author:</strong> {attributes.author || 'Unknown'}
-      </p>
-      <p>
-        <strong>Description:</strong>{' '}
-        {attributes.summary || 'No description available.'}
-      </p>
-      <h2>Chapters</h2>
+        <p>
+          <strong>Release date:</strong> {attributes.release_date}
+        </p>
+        <p>
+          <strong>Author:</strong> {attributes.author || 'Unknown'}
+        </p>
+        <p>
+          <strong>Description:</strong>{' '}
+          {attributes.summary || 'No description available.'}
+        </p>
+        <h2>Chapters</h2>
+      </div>
 
       {chapters.length === 0 ? (
         <p>No chapters found...</p>
