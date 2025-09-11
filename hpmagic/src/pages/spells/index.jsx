@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { SPELLS_URL } from '../../utils/constants';
 import Card from '../../components/card/elementCard';
 import SpellModal from '../../components/spellModal/spellModal';
+import styles from './spells.module.css';
 
 function Spells() {
   const [spells, setSpells] = useState([]);
@@ -50,11 +51,12 @@ function Spells() {
   }, [searchTerm, searchEffect, selectedCategory]);
 
   return (
-    <div className="spells-container">
+    <div className={styles.spellsContainer}>
       <h1>Spells</h1>
 
       <input
         type="text"
+        className={styles.searchInput}
         placeholder="Search by name..."
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
@@ -62,12 +64,14 @@ function Spells() {
 
       <input
         type="text"
+        className={styles.searchInput}
         placeholder="Search by effect..."
         value={searchEffect}
         onChange={e => setSearchEffect(e.target.value)}
       />
 
       <select
+        className={styles.categorySelect}
         value={selectedCategory}
         onChange={e => setSelectedCategory(e.target.value)}
       >
