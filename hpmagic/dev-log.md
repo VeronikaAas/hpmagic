@@ -41,4 +41,13 @@
 - Fetchet og displayet characters + tilhørende modal
 - Fetchet og displayet spells + tilhørende modal
 - Fetchet og displayet potions + tilhørende modal
--
+
+## 11.09.25
+
+- Stylet informasjon som vises over chapters på bøker
+- Stylet informasjon som vises når man klikker seg inn på en film
+- Endret farge på breadcrumbs så den passer mer inn på siden
+- I stedet for å bare gjøre den blåfargen til root farge som går igjen så la jeg inn den oransje fargen også (og endret der etter til å bruke denne)
+- Stylet søkefelt og house-filter for karakterene
+- Gikk opp for meg at jeg kunne lage globalstyle på design fra searchbar, jeg fikk det til på søkefeltene man skriver i - men ikke i dropdown filter
+- Stylet modalene til å passe uansett skjermstørrelse og viser all informasjon
