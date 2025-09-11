@@ -146,6 +146,9 @@ button {
   .searchInput {
     width: 70%;
   }
+  .modal {
+    max-width: 60%;
+  }
 }
 
 @media (max-width: 600px) {
