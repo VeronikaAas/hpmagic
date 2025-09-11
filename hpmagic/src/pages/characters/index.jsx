@@ -73,7 +73,10 @@ function Characters() {
       {loading && <p>Loading characters...</p>}
 
       {!loading && characters.length === 0 && (
-        <p>Maybe the character are in a different house?</p>
+        <p>
+          Maybe the character are in a different house? Or try to spell it
+          differently.
+        </p>
       )}
 
       <div className="card-grid">
