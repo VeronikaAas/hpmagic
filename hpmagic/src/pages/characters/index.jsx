@@ -51,18 +51,18 @@ function Characters() {
 
       <input
         type="text"
-        className={styles.searchInput}
+        className="searchInput"
         placeholder="Search by name..."
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
       />
 
       <select
-        className={styles.houseSelect}
+        className={styles.categorySelect}
         value={selectedHouse}
         onChange={e => setSelectedHouse(e.target.value)}
       >
-        <option value="">Show everyone</option>
+        <option value="">Choose a house</option>
         {HOUSES.map(house => (
           <option key={house} value={house}>
             {house}

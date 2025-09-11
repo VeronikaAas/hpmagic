@@ -1,8 +1,8 @@
-// src/pages/potions/Potions.js
 import { useEffect, useState } from 'react';
 import { POTIONS_URL } from '../../utils/constants';
 import Card from '../../components/card/elementCard';
 import PotionModal from '../../components/potionModal/potionModal';
+import styles from './potions.module.css';
 
 function Potions() {
   const [potions, setPotions] = useState([]);
@@ -49,11 +49,12 @@ function Potions() {
   }, [searchName, searchEffect, searchSideEffect]);
 
   return (
-    <div className="potions-container">
+    <div className={styles.potionsContainer}>
       <h1>Potions</h1>
 
       <input
         type="text"
+        className="searchInput"
         placeholder="Search by name..."
         value={searchName}
         onChange={e => setSearchName(e.target.value)}
@@ -61,6 +62,7 @@ function Potions() {
 
       <input
         type="text"
+        className="searchInput"
         placeholder="Search by effect..."
         value={searchEffect}
         onChange={e => setSearchEffect(e.target.value)}
@@ -68,6 +70,7 @@ function Potions() {
 
       <input
         type="text"
+        className="searchInput"
         placeholder="Search by side effect..."
         value={searchSideEffect}
         onChange={e => setSearchSideEffect(e.target.value)}

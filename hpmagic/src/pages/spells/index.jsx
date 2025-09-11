@@ -56,7 +56,7 @@ function Spells() {
 
       <input
         type="text"
-        className={styles.searchInput}
+        className="searchInput"
         placeholder="Search by name..."
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
@@ -64,7 +64,7 @@ function Spells() {
 
       <input
         type="text"
-        className={styles.searchInput}
+        className="searchInput"
         placeholder="Search by effect..."
         value={searchEffect}
         onChange={e => setSearchEffect(e.target.value)}
