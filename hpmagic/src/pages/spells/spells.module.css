@@ -7,13 +7,6 @@
   gap: 1rem;
 }
 
-.searchInput {
-  padding: 8px 12px;
-  font-size: 1rem;
-  border: 2px solid var(--detail-color);
-  width: 50%;
-}
-
 .categorySelect {
   padding: 8px 12px;
   font-size: 1rem;
@@ -25,9 +18,5 @@
 @media (max-width: 1024px) {
   .categorySelect {
     width: 50%;
-  }
-
-  .searchInput {
-    width: 70%;
   }
 }
