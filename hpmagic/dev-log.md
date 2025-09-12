@@ -51,5 +51,10 @@
 - Stylet søkefelt og house-filter for karakterene
 - Gikk opp for meg at jeg kunne lage globalstyle på design fra searchbar, jeg fikk det til på søkefeltene man skriver i - men ikke i dropdown filter
 - Stylet modalene til å passe uansett skjermstørrelse og viser all informasjon
-- Kuka (pardon my french) det skikkelig til med deploy av side på Netlify. Av en grunn jeg enda ikke har skjønt, så får jeg det kun til med å bruke terminal og netlify CLI. Hadde et svakt øyeblikk hvor jeg rota med hvor filene skulle ligge, så ble mye tull med commit.
+- Kuka (pardon my french) det skikkelig til med deploy av side på Netlify. Av en grunn jeg enda ikke har skjønt, så får jeg det kun til med å bruke terminal og netlify CLI. Hadde et svakt øyeblikk hvor jeg rota med hvor filene skulle ligge, så ble mye tull med commit (så har lite lyst til å røre de 14 filene som ligger i source control).
 - Så jeg hadde lagt til error.console, men ikke error melding til brukeren - så la det så det synes for bruker også
+
+## 12.09.25
+
+- Lagt til en form for JSdocs, bare med enkel norsk forklaring på koden
+- Oppdatert readme file
