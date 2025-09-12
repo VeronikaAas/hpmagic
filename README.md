@@ -50,4 +50,6 @@ cd hp-magic
 npm install
 npm run dev
 
+---
+
 ## All data is fetched from the PotterDB API
