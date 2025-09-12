@@ -1,7 +1,3 @@
-# hpmagic
-
-A small exercise in fetching data from an API, built with Vite, React, and vanilla CSS.
-
 # 🪄 HP Magic
 
 **HP Magic** is a Harry Potter-themed information site where users can explore books, films, characters, spells, and potions. The site fetches data from the [PotterDB API](https://potterdb.com/), and presents it through dynamic navigation with breadcrumbs and interactive cards.
