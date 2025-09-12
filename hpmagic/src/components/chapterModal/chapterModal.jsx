@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import { BOOKS_URL } from '../../utils/constants';
 import Modal from '../genericModal/modal';
 
+// Modal-komponent som henter og viser informasjon om et kapittel i en bok basert på bookId og chapterId.
+// Bruker useEffect for å hente data når komponenten monteres eller når bookId/chapterId endres.
+// Håndterer lastetilstand og feil under henting av data, og viser relevant informasjon i modalen.
+
 function ChapterModal({ bookId, chapterId, onClose }) {
   const [chapter, setChapter] = useState(null);
   const [loading, setLoading] = useState(true);

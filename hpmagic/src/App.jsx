@@ -10,12 +10,13 @@ import Characters from './pages/characters';
 import Spells from './pages/spells';
 import Potions from './pages/potions';
 
+// Hovedapplikasjonskomponent som setter opp ruter ved hjelp av react-router-dom.
+// Inkluderer Layout-komponenten som omslutter alle sider, og definerer individuelle ruter for hver sidekomponent.
+
 function App() {
   return (
     <Routes>
-      {/* Wrapper layout */}
       <Route path="/" element={<Layout />}>
-        {/* Nested routes under layout */}
         <Route index element={<Home />} />
         <Route path="books" element={<Books />} />
         <Route path="books/:id" element={<BookDetails />} />

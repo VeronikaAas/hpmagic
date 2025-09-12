@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 
+// Enkel kortkomponent som kan fungere som en lenke eller en klikkbar div basert på props.
+// Tar inn title (korttittel), to (valgfri lenke) og onClick (valgfri klikkfunksjon) som props.
+
 function Card({ title, to, onClick }) {
   if (to) {
     return (

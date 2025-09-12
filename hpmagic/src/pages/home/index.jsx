@@ -2,6 +2,8 @@ import '../../index.css';
 import '../../components/header/header.jsx';
 import './home.css';
 
+// Sidekomponent for hjemmesiden som viser et bilde og tekst.
+
 function Home() {
   return (
     <div className="home-container">

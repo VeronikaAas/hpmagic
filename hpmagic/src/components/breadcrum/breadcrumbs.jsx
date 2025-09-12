@@ -1,6 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
 import styles from './breadcrumbs.module.css';
 
+//Koden definerer en React-komponent som genererer en navigasjonssti (breadcrumbs) basert på gjeldende URL.
+// Den bruker useLocation fra react-router-dom for å hente stien, splitter denne, og bygger lenker tilbake til hver del av stien.
+// Komponentens styling håndteres via en ekstern CSS-modul. Dersom brukeren befinner seg på rotstien ("/"), returneres ingenting.
+
 function Breadcrumbs() {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter(x => x);

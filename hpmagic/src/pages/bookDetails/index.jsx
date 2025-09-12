@@ -5,6 +5,9 @@ import ChapterModal from '../../components/chapterModal/chapterModal';
 import Card from '../../components/card/elementCard';
 import styles from './bookDetails.module.css';
 
+// Sidekomponent for å vise detaljer om en spesifikk bok, inkludert tittel, forfatter, utgivelsesdato og beskrivelse.
+// Henter også og viser en liste over kapitler i boken, og åpner en modal med kapitteldetaljer når et kapittel klikkes på.
+
 function BookDetails() {
   const { id } = useParams();
   const [book, setBook] = useState(null);

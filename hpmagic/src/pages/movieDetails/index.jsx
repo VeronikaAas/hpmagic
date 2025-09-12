@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 import { MOVIES_URL } from '../../utils/constants';
 import styles from './movieDetails.module.css';
 
+// Sidekomponent for å vise detaljer om en spesifikk film, inkludert tittel, utgivelsesdato, spilletid, vurdering, budsjett, manusforfattere, produsenter og beskrivelse.
+// Henter data fra MOVIES_URL ved hjelp av useEffect når komponenten monteres.
+
 function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);

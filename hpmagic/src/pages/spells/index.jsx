@@ -4,6 +4,11 @@ import Card from '../../components/card/elementCard';
 import SpellModal from '../../components/spellModal/spellModal';
 import styles from './spells.module.css';
 
+// Sidekomponent for å vise en liste over spells.
+// Henter data fra SPELLS_URL ved hjelp av useEffect når komponenten monteres eller når søkefiltre endres.
+// Inkluderer søkefunksjonalitet basert på navn, effekt og kategori.
+// Viser en modal med detaljert informasjon når en spell klikkes på.
+
 function Spells() {
   const [spells, setSpells] = useState([]);
   const [loading, setLoading] = useState(false);

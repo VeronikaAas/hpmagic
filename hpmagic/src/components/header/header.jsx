@@ -11,6 +11,10 @@ import {
   FaBars,
 } from 'react-icons/fa';
 
+// Header-komponent med navigasjonslenker og hamburger-meny for mobilvisning.
+// Bruker useState for å håndtere menyens åpne/lukke-tilstand.
+// NavLink fra react-router-dom brukes for å lage navigasjonslenker med aktiv styling.
+
 const links = [
   { to: '/', label: 'Home', icon: <FaHome /> },
   { to: '/books', label: 'Books', icon: <FaBook /> },

@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import { POTIONS_URL } from '../../utils/constants';
 import Modal from '../genericModal/modal';
 
+// Modal-komponent som henter og viser informasjon om en potions basert på potionId.
+// Bruker useEffect for å hente data når komponenten monteres eller når potionId endres.
+// Håndterer lastetilstand og feil under henting av data, og viser relevant informasjon i modalen.
+
 function PotionModal({ potionId, onClose }) {
   const [potion, setPotion] = useState(null);
   const [loading, setLoading] = useState(true);

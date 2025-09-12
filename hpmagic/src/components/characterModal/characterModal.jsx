@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import Modal from '../genericModal/modal';
 import { CHARACTERS_URL } from '../../utils/constants';
 
+// Modal-komponent som henter og viser informasjon om en karakter basert på characterId.
+// Bruker useEffect for å hente data når komponenten monteres eller når characterId endres.
+// Håndterer lastetilstand og feil under henting av data, og viser relevant informasjon i modalen.
+
 function CharacterModal({ characterId, onClose }) {
   const [character, setCharacter] = useState(null);
   const [loading, setLoading] = useState(true);

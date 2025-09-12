@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import { MOVIES_URL } from '../../utils/constants';
 import Card from '../../components/card/elementCard';
 
+// Sidekomponent for å vise en liste over filmer.
+// Henter data fra MOVIES_URL ved hjelp av useEffect når komponenten monteres.
+// Håndterer lastetilstand og feil under henting av data, og viser relevant informasjon.
+
 function Movies() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);

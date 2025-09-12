@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import { SPELLS_URL } from '../../utils/constants';
 import Modal from '../genericModal/modal';
 
+// Modal-komponent som henter og viser informasjon om en spell basert på spellId.
+// Bruker useEffect for å hente data når komponenten monteres eller når spellId endres.
+// Håndterer lastetilstand og feil under henting av data, og viser relevant informasjon i modalen.
+
 function SpellModal({ spellId, onClose }) {
   const [spell, setSpell] = useState(null);
   const [loading, setLoading] = useState(true);

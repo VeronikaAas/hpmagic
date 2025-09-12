@@ -4,6 +4,11 @@ import Card from '../../components/card/elementCard';
 import PotionModal from '../../components/potionModal/potionModal';
 import styles from './potions.module.css';
 
+// Sidekomponent for å vise en liste over potions.
+// Henter data fra POTIONS_URL ved hjelp av useEffect når komponenten monteres eller når søkefiltre endres.
+// Inkluderer søkefunksjonalitet basert på navn, effekt og bivirkninger.
+// Viser en modal med detaljert informasjon når en potion klikkes på.
+
 function Potions() {
   const [potions, setPotions] = useState([]);
   const [loading, setLoading] = useState(false);

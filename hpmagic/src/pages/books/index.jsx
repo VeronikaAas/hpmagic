@@ -2,6 +2,10 @@ import { useEffect, useState } from 'react';
 import { BOOKS_URL } from '../../utils/constants';
 import Card from '../../components/card/elementCard';
 
+// Sidekomponent for å vise en liste over bøker.
+// Henter data fra BOOKS_URL ved hjelp av useEffect når komponenten monteres.
+// Håndterer lastetilstand og feil under henting av data, og viser relevant informasjon.
+
 function Books() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);

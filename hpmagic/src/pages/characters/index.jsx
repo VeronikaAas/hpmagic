@@ -4,6 +4,11 @@ import Card from '../../components/card/elementCard';
 import CharacterModal from '../../components/characterModal/characterModal';
 import styles from './characters.module.css';
 
+// Sidekomponent for å vise en liste over karakterer.
+// Henter data fra CHARACTERS_URL ved hjelp av useEffect når komponenten monteres eller når filter endres.
+// Inkluderer søkefunksjonalitet og filtrering basert på hus.
+// Viser en modal med detaljert informasjon når en karakter klikkes på.
+
 const HOUSES = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
 
 function Characters() {
