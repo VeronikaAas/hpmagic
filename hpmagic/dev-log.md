@@ -58,3 +58,7 @@
 
 - Lagt til en form for JSdocs, bare med enkel norsk forklaring på koden
 - Oppdatert readme file
+
+## 13.09.25
+
+- La til document title på hcer side
