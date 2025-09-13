@@ -19,6 +19,7 @@ function Characters() {
   const [selectedCharacterId, setSelectedCharacterId] = useState(null);
 
   useEffect(() => {
+    document.title = 'Characters - HP Magic';
     async function fetchCharacters() {
       setLoading(true);
       try {

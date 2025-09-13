@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import '../../index.css';
 import '../../components/header/header.jsx';
 import './home.css';
@@ -5,6 +6,10 @@ import './home.css';
 // Sidekomponent for hjemmesiden som viser et bilde og tekst.
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Home | HP Magic';
+  }, []);
+
   return (
     <div className="home-container">
       <div className="image-content">

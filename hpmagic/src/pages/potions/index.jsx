@@ -18,6 +18,7 @@ function Potions() {
   const [selectedPotionId, setSelectedPotionId] = useState(null);
 
   useEffect(() => {
+    document.title = 'Potions - HP Magic';
     async function fetchPotions() {
       setLoading(true);
       try {

@@ -12,6 +12,7 @@ function MovieDetails() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = 'Movie Details - HP Magic';
     async function fetchMovie() {
       try {
         setLoading(true);

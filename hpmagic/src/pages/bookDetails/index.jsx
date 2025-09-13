@@ -33,6 +33,7 @@ function BookDetails() {
       } finally {
         setLoading(false);
       }
+      document.title = 'Book Details - HP Magic';
     }
 
     fetchBookAndChapters();

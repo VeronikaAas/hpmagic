@@ -11,6 +11,7 @@ function Movies() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = 'Movies - HP Magic';
     fetch(MOVIES_URL)
       .then(res => res.json())
       .then(data => {

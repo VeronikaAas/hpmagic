@@ -22,6 +22,7 @@ function Books() {
         setError(error.message || 'Something went wrong while fetching books.');
         setLoading(false);
       });
+    document.title = 'Books - HP Magic';
   }, []);
 
   if (loading) return <p>Loading books...</p>;

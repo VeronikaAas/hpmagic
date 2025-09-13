@@ -20,6 +20,7 @@ function Spells() {
   const CATEGORIES = ['Charm', 'Curse', 'Hex', 'Jinx', 'Spell', 'Conjuration'];
 
   useEffect(() => {
+    document.title = 'Spells - HP Magic';
     async function fetchSpells() {
       setLoading(true);
       try {
